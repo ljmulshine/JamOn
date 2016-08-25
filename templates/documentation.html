@@ -1,0 +1,91 @@
+<link href="../public/css/styles.css" rel="stylesheet"/>
+<div class="container">
+    <h1 class="docHeader">User Manual</h1>
+</div>
+<div>
+    <h3 class="title">Getting started</h3>
+</div>
+<div>
+    <p>First, unzip the file, final.zip, and save the unzipped file in the directory, vhosts, within the CS50 Appliance, saving it with the filename, final. Within the terminal window, execute the command:
+    </p>
+    <p> sudo gedit /etc/hosts
+    </p>
+    <p>and carefully add:
+    </p>
+    <p>127.0.0.1 final
+    </p>
+    <p>to the bottom of the file that pops up. Then save and exit that file. Now its time to execute some chmod commands
+    </p>
+    <p>In the appliance, lets make sure some directories are world-executable:
+    </p>
+    <p>chmod a+x ~</p>
+    <p>chmod a+x ~/vhosts</p>
+    <p>chmod a+x ~/vhosts/final</p>
+    <p>chmod a+x ~/vhosts/final/public</p>
+    <p>cd ~/vhosts/final/public</p>
+    <p>chmod a+x css fonts js php-soundcloud</p>
+    <p>cd ~/vhosts/final/public/php-soundcloud</p>
+    <p>chmod a+x Servies tests</p>
+    <p>cd ~/vhosts/final/public/php-soundcloud/Services</p>
+    <p>chmod a+x Soundcloud<p>
+    <p>Head to the public directory by executing cd ~/vhosts/final/public. Then, to make some contents of files world-readable, execute:
+    </p>
+    <p>chmod a+r js/* css/* fonts/*</p>
+    <p>chmod 644 CHANGELOG.md README.md</p>
+    <p>Go inside the Services folder with cd Services and execute the following code:
+    </p>
+    <p>chmod a+r Soundcloud.php cacert.pem</p>
+    <p>Then go one more step with cd Soundcloud and execute:</p>
+    <p>chmod a+r Exception.php Version.php</p>
+    <p>Change directories by executing: cd ~/vhosts/final/public/php-soundcloud and execute:</p>
+    <p>chmod a+r tests/*</p>
+<div>
+    <h3 class="title">Setting up phpMyAdmin</h3>
+    <p>Now you have to set up the phpMyAdmin database, final, which we use to keep track the users who use our site, and their music groups. Open in Gedit the file, final.sql, which is located within the final directory of the unzipped file final. Copy the entire page and, after logging into your phpMyAdmin account, paste it into the SQL query text box. 
+    </p>
+    <p>After you press Go, the database, final, should appear on the left hand side of your phpMyAdmin profile, near any other databases you have already created. Within the database, final, three tables should appear, users, userGroups, and groups. After you have done this, you can exit phpMyAdmin, and continue to follow these instructions. You are almost there!
+    </p>
+</div>
+<div>
+    <h3 class="title">Introduction to Soundcloud</h3>
+    <p>Our website, JamOn, connects your preferences in soundcloud to groups that you or your friends create. Therefore, in order to use our website, you must have a soundcloud account! Head to: <a href="http://www.soundcloud.com">www.soundcloud.com</a> and hit: sign in, if the you already have an account. If you do not have an account, click the: Sign Up button. 
+    </p>
+    <p>You can connect with either Facebook or Google, or with a valid email address and password. Now you can specify some of your own music preferences! On the Soundcloud website, search for a song that you like in the search bar at the top. You can click the: Like button (with the heart next to it) to add this song to your favorites. Continue to like songs until you feel that all of your music preferences have been satisfied.
+    </p>
+</div>
+
+<div>
+    <h3 class="title">Accessing the Webpage</h3>
+</div>
+<p>
+    Then head to the Jam-On website itself. Because you saved the file containing all of the code for our website in the vhosts directory, allowing you to run the website using your local server, just go to <a href="http://final/">http://final/</a> to get to the first page of our website. This page is the login page, which, shows two input text boxes, a Log In button, and a blue register link. Click the register link to create a new account. On the register page, create a username and a password, and then click register. You should then be redirected to the login page. Enter the username and password that you just used when you registered an account, in order to log in to your profile.
+</p>
+<p>
+    You will then be redirected to a Soundcloud webpage with the title: Allow JamOn to access your Soundcloud account? At this point, you should have a soundcloud account already. If not, go back to the section of this user manual that describes how to create a soundcloud account. You will need to click the sign me out! link if there is different user signed in. If no one is signed in, sign in via facebook, google or another email address and password. Upon entering this information, you will be redirected to the Home (index) page.
+</p>
+<p>
+    If there is nothing displayed at the Home (or index) screen, not to worry! This just means that the you do not have any favorites on soundcloud itself. If this is the case, head to: www.soundcloud.com and hit the sign in button if not already signed in. Then begin to build up your list of favorites by following the instructions on how to like a song on Soundcloud above.
+</p>
+
+<p>
+
+</p>
+<div>
+    <h3 class="title">Walk Through</h3>
+</div>
+<p>
+    On the Home page, which contains your Soundcloud song favorites, you can click the Play Song button to play that individual song within the website itself! Otherwise, you have many options! How about you try to create a group of your own. If you want to create a group of your own, click the Create Group button near the top of the webpage. This should redirect you to a form whereby you are prompted to enter a group name. However, we should advise you to be careful in your group name choice, as some words (such as SQL reserved words and strings containing non-alphanumeric characters) are not valid in this entry. If you try to create a group with an invalid group name, you will receive an Invalid Group Name message from the website. If you input a valid group name, your preferences will automatically be linked to this group, so no need to join a group you create! After creating a group, you will be redirected back to the home page, where you will again have many options to proceed.
+</p>
+<p>
+    If, instead of creating a group, you wish to join a preexisting group, click the Join Group button near the top of the webpage. You will be redirected to a page that looks similar to the Create Group page. Here, if you know the name of the group you wish to join, simply type it into the text field and hit the Join button. Your Soundcloud music preferences will be inputted into that group for you and your fellow group members to later access. You will then be redirected back to the Home Page where you will again have many options to proceed.
+</p>
+
+<p>
+    If you now wish to remove another user (or yourself for that matter) from any group that you are a part of (due to inactivity, absence or some other factor) you can head to the Update Members page of the website by clicking on Update Members button near the top of the page. This should redirect the you to a page with a listing of all of the groups that you are a part of. In the Group Members column of the table, you will see a drop down menu that lists the members within the group in the same row as the drop down menu. You can then type into the text box in the row of the group that you want to remove a user from the Soundcloud username of fellow group member you want to remove and then click, Remove User, to remove that user from the group. The page will be refreshed where you will be able to see any changes that you made. 
+</p>
+
+<p>
+    Once all groups are properly updated with their users, you can head to the My Groups page, by clicking on the button, My Groups, located near the top of the webpage, for the final step in the process. At this point, you will have the opportunity to play a random shuffle of all of the songs within your group! Just click the Play Songs button under the Click To Jam column, and you and your friends favorite tunes will await you! There is even a Next Song button that will allow you to skip the current song, if for some reason you do not want to listen to it. If you have recently updated your preferences on the soundcloud application, it would be a good idea to click the Changed Favorites Recently? button near the bottom of the screen. This will update your groups to contain your most recent Soundcloud song favorites. Thanks for reading and enjoy using our website!
+</p>
+
+</div>

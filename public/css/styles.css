@@ -1,0 +1,115 @@
+/**
+ * styles.css
+ *
+ * Liam Mulshine and Spencer Hallyburton
+ * Final Project
+ * Some styling taken from CS50s CS50 Finance Problem Set 7
+ *
+ * Global CSS.
+ */
+ .title
+ {
+     font-style: italic;
+     font-size: larger;
+     text-decoration: underline;s   
+ }
+.docHeader
+{
+    color: blue;
+}
+.container
+{
+    /* center contents */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+     
+}
+.image
+{
+    /* set size of music note images in header*/
+    margin-left: 30px;
+    margin-right: 30px;
+
+}
+
+.tableHeader
+{
+    /* bold and enlargen table headers */
+    color:#00007A;
+    font-weight: bold;
+    font-size: large;
+}
+.songName
+{
+    /* style song names in home template*/
+    font-style: italic;
+    font-weight: bold;
+}
+#select:first-child, .tableGroupName
+{
+    /* make first child of select tag (Members) bold in Update Members template */
+    font-weight:bold;   
+}
+#table
+{   
+    /* Make the background of the tables in My Groups and Update Members white*/
+    background-color:white;
+}
+#header {
+    background-color:#0099FF;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+#middle .form-control
+{
+    /* center form controls */
+    display: inline-block;
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+#bottom
+{
+    /* shrink bottom's font size */
+    font-size: smaller;
+
+    /* surround with whitespace */
+    margin: 20px;
+}
+#balance {
+
+    border: 5px solid green;
+    background-color: #daa520;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+table {
+    
+    border: 1px solid #0099FF;
+    text-align:center;
+    width:100%;
+    
+}
+.tableheader {
+
+    border: 5px solid green;
+    font-weight: bold;
+    font-size: medium;
+    width: 100px;
+    
+}
+body {
+
+    background-color:#BDBDC1; 
+
+}
+#nav {
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
